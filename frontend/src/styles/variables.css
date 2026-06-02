@@ -1,0 +1,17 @@
+:root {
+  --primary-color: #4a6bff;
+  --secondary-color: #3498db;
+  --background-color: #ffffff;
+  --surface-color: #f8f9fa;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --border-color: #e0e0e0;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --error-color: #e74c3c;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+} 

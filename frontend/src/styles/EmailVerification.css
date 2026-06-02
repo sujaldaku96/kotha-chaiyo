@@ -1,0 +1,97 @@
+.verification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../assets/images/Hero.jpg') center/cover no-repeat;
+  backdrop-filter: blur(8px);
+}
+
+.verification-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.verification-box h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.verification-info {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.verification-info strong {
+  color: #ff416c;
+}
+
+.verification-box input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.verification-box input:focus {
+  border-color: #ff416c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 65, 108, 0.3);
+}
+
+.verify-button {
+  width: 100%;
+  padding: 15px;
+  background: #ff416c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.verify-button:hover {
+  background: #e03e5c;
+  transform: translateY(-2px);
+}
+
+.verify-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  color: #ff416c;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.resend-text {
+  margin-top: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+.resend-link {
+  color: #ff416c;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.resend-link:hover {
+  color: #e03e5c;
+} 

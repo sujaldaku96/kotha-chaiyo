@@ -1,0 +1,170 @@
+.payment-failed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px); 
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.payment-failed-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.error-icon {
+  width: 80px;
+  height: 80px;
+  background: #dc3545;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 40px;
+}
+
+.error-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.payment-failed-box h2 {
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.payment-failed-box p {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.error-details {
+  background: #fff8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: left;
+  border: 1px solid #ffebeb;
+}
+
+.error-details h3 {
+  color: #dc3545;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #fff8f8;
+  border-radius: 6px;
+  border: 1px solid #ffebeb;
+}
+
+.troubleshooting-tips {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.troubleshooting-tips h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-list li {
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+  color: #666;
+}
+
+.tips-list li:before {
+  content: "•";
+  color: #dc3545;
+  font-size: 18px;
+  position: absolute;
+  left: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.primary-button, .secondary-button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 150px;
+}
+
+.primary-button {
+  background: #ff416c;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #e03e5c;
+}
+
+.secondary-button {
+  background: transparent;
+  color: #ff416c;
+  border: 1px solid #ff416c;
+}
+
+.secondary-button:hover {
+  background: rgba(255, 65, 108, 0.1);
+}
+
+.support-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ff416c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.support-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .payment-failed-box {
+    padding: 30px 20px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .primary-button, .secondary-button {
+    width: 100%;
+  }
+} 

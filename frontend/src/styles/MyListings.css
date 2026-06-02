@@ -1,0 +1,645 @@
+.my-listings-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 80vh;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: #f5f5f5;
+}
+
+.tab-button.active {
+  color: white;
+  box-shadow: 0 2px 8px rgba(74, 107, 255, 0.3);
+}
+
+.count-badge {
+  background: #ff4757;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* Section Headers */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.primary-btn {
+  background-color: #4a6bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primary-btn:hover {
+  background-color: #3a5bef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 107, 255, 0.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  margin-top: 1rem;
+}
+
+.empty-state h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.empty-state p {
+  color: #7f8c8d;
+  margin: 1rem 0 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.properties-grid,
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.myl-property-card,
+.myl-booking-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.myl-property-card:hover,
+.myl-booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.myl-property-image,
+.myl-booking-image {
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.myl-property-image img,
+.myl-booking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.myl-property-card:hover .myl-property-image img,
+.myl-booking-card:hover .myl-booking-image img {
+  transform: scale(1.05);
+}
+
+.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f5f5f5;
+  font-weight: bold;
+  color: #999;
+}
+
+.status-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 600;
+  background: #7f8c8d;
+}
+
+.status-badge.approved {
+  background: #2ecc71;
+}
+
+.status-badge.pending {
+  background: #f39c12;
+}
+
+.status-badge.available {
+  background: #3498db;
+}
+
+.status-badge.booked {
+  background: #e74c3c;
+}
+
+.status-badge.confirmed {
+  background: #3498db;
+}
+
+.status-badge.cancelled {
+  background: #e74c3c;
+}
+
+.status-badge.refunded {
+  background: #27ae60;
+}
+
+.status-badge.myl-available {
+  background: #3498db;
+}
+
+.status-badge.myl-booked {
+  background: #e74c3c;
+}
+
+.property-info,
+.booking-info {
+  padding: 1.25rem;
+  flex-grow: 1;
+}
+
+.property-info h3,
+.booking-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #2c3e50;
+  transition: color 0.2s;
+}
+
+.property-info h3:hover,
+.booking-info h3:hover {
+  color: #4a6bff;
+}
+
+.property-info .price,
+.booking-info .price {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #4a6bff;
+  font-size: 1.1rem;
+}
+
+.property-info .location,
+.booking-info .location {
+  margin-top: 0.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.booking-info .payment-method,
+.booking-info .booking-dates {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.property-meta {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
+  color: #555;
+}
+
+.property-actions,
+.booking-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+.action-btn.edit {
+  background: #f39c12;
+  color: #fff;
+}
+
+.action-btn.delete {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.action-btn.payment {
+  background: #4a6bff;
+  color: #fff;
+}
+
+.action-btn.view {
+  background: #3498db;
+  color: #fff;
+}
+
+.action-btn.cancel {
+  background: #95a5a6;
+  color: #fff;
+}
+
+.action-btn.refund {
+  background: #27ae60;
+  color: #fff;
+}
+
+.action-btn.details {
+  background: #4a6bff;
+  color: #fff;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn.refund:hover {
+  background: #219a52;
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #4a6bff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner + p {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.auth-error {
+  text-align: center;
+  padding: 3rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.auth-error h2 {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.auth-error p {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .my-listings-container {
+    padding: 1.5rem;
+  }
+  
+  .properties-grid,
+  .bookings-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .properties-grid,
+  .bookings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .myl-property-image,
+  .myl-booking-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-listings-container {
+    padding: 1rem;
+  }
+  
+  .properties-grid,
+  .bookings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .tab-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .myl-property-image,
+  .myl-booking-image {
+    height: 160px;
+  }
+  
+  .property-info h3,
+  .booking-info h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .my-listings-container {
+    padding: 0.75rem;
+  }
+  
+  .properties-grid,
+  .bookings-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .myl-property-image,
+  .myl-booking-image {
+    height: 200px;
+  }
+  
+  .property-info,
+  .booking-info {
+    padding: 0.75rem;
+  }
+  
+  .property-info h3,
+  .booking-info h3 {
+    font-size: 1rem;
+  }
+  
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .empty-state h3 {
+    font-size: 1.2rem;
+  }
+  
+  .empty-state p {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.myl-property-card,
+.myl-booking-card {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+/* Delay animations for staggered effect */
+.myl-property-card:nth-child(1) { animation-delay: 0.1s; }
+.myl-property-card:nth-child(2) { animation-delay: 0.2s; }
+.myl-property-card:nth-child(3) { animation-delay: 0.3s; }
+.myl-property-card:nth-child(4) { animation-delay: 0.4s; }
+
+.refund-date {
+  margin-top: 0.5rem;
+  color: #27ae60;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.refund-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.refund-details-modal .modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.refund-details-modal .close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.refund-details-modal .close-modal:hover {
+  color: #333;
+}
+
+.refund-details-modal h3 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.refund-details-modal .details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.refund-details-modal .detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.refund-details-modal .detail-item label {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.refund-details-modal .detail-item span {
+  color: #2c3e50;
+  font-size: 1rem;
+  word-break: break-all;
+}
+
+.refund-details-modal .status-badge.refunded {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #e3fcef;
+  color: #00875a;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .refund-details-modal .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .refund-details-modal .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .refund-details-modal .detail-item {
+    padding: 10px;
+  }
+}
+
+.myl-approval-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.myl-booking-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.myl-status-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.status-badge.approved {
+  background: #2ecc71;
+}
+.status-badge.pending {
+  background: #f39c12;
+}
+
+.status-badge.myl-available,
+.status-badge.myl-booked,
+.myl-booking-badge,
+.myl-approval-badge {
+  display: none !important;
+}

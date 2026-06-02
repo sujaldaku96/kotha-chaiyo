@@ -1,0 +1,149 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../assets/images/Hero.jpg') center/cover no-repeat;
+backdrop-filter: blur(8px);
+}
+
+.login-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+  position: relative;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff416c;
+  box-shadow: 0px 0px 5px rgba(255, 65, 108, 0.5);
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #777;
+}
+
+.eye-icon:hover {
+  color: #333;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #ff416c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background: #e03e5c;
+}
+
+.forgot-password {
+  color: #ff416c;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  color: #e03e5c;
+}
+
+.terms {
+  font-size: 12px;
+  margin-top: 20px;
+  color: #555;
+}
+
+.login-back-button {
+  background: transparent;
+  border: 1px solid #ff416c;
+  color: #ff416c;
+  cursor: pointer;
+  margin: 10px;
+  padding: 3px 8px;
+  max-width: 80px;
+  border-radius: 6px;
+  position: absolute;
+   top: 10px;
+  left: 10px; 
+  transition: 0.3s;
+  text-align: center;
+}
+
+.login-back-button:hover {
+  background: #ff416c;
+  color: white;
+}
+
+.signup-section {
+  margin-top: 20px;
+}
+
+.signup-section p {
+  font-size: 14px;
+  color: #333;
+}
+
+.signup-button {
+  background: #ff4b2b;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-button:hover {
+  background: #e03e5c;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

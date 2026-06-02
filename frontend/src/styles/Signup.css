@@ -1,0 +1,151 @@
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ff416c;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: #f4f7fc; */
+  background: url('../assets/images/Hero.jpg') center/cover no-repeat;
+  backdrop-filter: blur(8px);
+}
+
+.signup-box {
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 350px;
+  position: relative;
+}
+
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.sign-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff416c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.sign-button:hover {
+  background-color: #e03e5c;
+}
+
+.message {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.message.error {
+  color: red;
+}
+
+.message.success {
+  color: green;
+}
+
+.terms {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.terms strong {
+  color: #ff416c;
+}
+
+.already-account {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.already-account span {
+  color: #ff416c;
+  cursor: pointer;
+}
+
+.already-account span:hover {
+  text-decoration: underline;
+}
+
+.signup-back-button {
+  background: transparent;
+  border: 1px solid #ff416c;
+  color: #ff416c;
+  cursor: pointer;
+  margin: 10px;
+  padding: 3px 8px; 
+  max-width: 80px;
+  border-radius: 6px;
+  position: absolute;
+   top: 10px;
+  left: 10px; 
+  transition: 0.3s;
+  text-align: center;
+}
+
+.signup-back-button:hover {
+  background: #ff416c;
+  color: white;
+}
+
+.role-selection {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.role-selection label {
+  font-size: 14px;
+  color: #333;
+}
+
+.role-selection select {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
